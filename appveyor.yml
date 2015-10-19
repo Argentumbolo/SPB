@@ -1,8 +1,3 @@
-environment:
-  P: "c:/projects/libs"
-  ACCOUNT:
-      secure: F8Xu4syZJRRLmTnPDOUjr5bG7Lk6UburldIUuxZ/OJQ=
-
 # branches to build
 branches:
   # whitelist
@@ -18,7 +13,7 @@ init:
 
 
 # clone directory
-clone_folder: c:\projects\sqlite
+clone_folder: "C:/projects/spb-dialog-c"
 
 platform: x64
 
@@ -34,3 +29,6 @@ build:
 before_build:
   - echo Running cmake...
   - cmake -G "Visual Studio 14 2015 Win64" .
+  - DIR C:\
+  - DIR C:\projects\
+  - DIR C:\projects\spb-dialog-c
