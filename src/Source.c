@@ -7,7 +7,7 @@ struct number {
 };
 
 struct elem {
-	char name[50];
+	char name[64];
 	char street[30];
 	char city[30];
 	struct number num;
@@ -18,7 +18,7 @@ void addElem() {
 	FILE *data = fopen("data", "ab");
 	printf("Enter data about a new item\n");
 	printf("Name: ");
-	scanf("%s", newE.name);
+	scanf("%63s", newE.name);
 	printf("\nStreet: ");
 	scanf("%s", newE.street);
 	printf("\nCity: ");
