@@ -11,4 +11,6 @@ branches:
     - master
 
 script:
-  - make && ./test/testrun.sh
+  - cmake .
+  - make
+  - ./test/testrun.sh
