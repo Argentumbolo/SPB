@@ -20,9 +20,7 @@ init:
 # clone directory
 clone_folder: c:\projects\sqlite
 
-platform:
-  - x86
-  - x64
+platform: x64
 
 configuration: Debug
 
