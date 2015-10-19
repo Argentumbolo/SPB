@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.8)
 
-set (PRJ "SPB")
+set (PRJ "spb")
 set ("${PRJ}_BIN_DIR" bin)
 set ("${PRJ}_SRC_DIR" src)
 set (EXECUTABLE_OUTPUT_PATH ${${PRJ}_BIN_DIR})
