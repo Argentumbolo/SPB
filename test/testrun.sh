@@ -1,3 +1,3 @@
 #!/bin/sh
 
-BUILD/spb < test/test.inp
+bin/spb < test/test.inp
