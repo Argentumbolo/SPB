@@ -10,7 +10,7 @@ set (CMAKE_BUILD_TYPE Debug)
 
 if (CMAKE_COMPILER_IS_GNUCC)
     set (CMAKE_C_FLAGS "-O0")
-    set (CMAKE_C_FLAGS "-std=gnu11")
+    set (CMAKE_C_FLAGS "-std=c11")
 endif (CMAKE_COMPILER_IS_GNUCC)
 
 if (MSVC)
