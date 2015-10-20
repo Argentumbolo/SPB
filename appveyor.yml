@@ -2,6 +2,7 @@
 branches:
   only:
     - master
+    - develop
 
 # Operating system (build VM template)
 os: Visual Studio 2015
@@ -11,14 +12,15 @@ init:
   - git config --global core.autocrlf input
 
 # clone directory
-clone_folder: "C:/projects/spb-dialog-c"
+clone_folder: "C:\projects\spb-dialog-c\"
 
-platform: x64
+platform:
+  - x64
+  - x86
 
 configuration: Debug
 
-install:
-  # by default, all script lines are interpreted as batch
+install: # by default, all script lines are interpreted as batch
 
 build:
   project: ALL_BUILD.vcxproj      # path to Visual Studio solution or project
@@ -29,7 +31,9 @@ before_build:
   - cmake -G "Visual Studio 14 2015 Win64" .
 
 after_build:
-  - DIR C:\
-  - DIR C:\projects\
-  - DIR C:\projects\spb-dialog-c
+  - DIR /S > "C:\projects\spb-dialog-c\listdir.log"
   - test\testrun.bat
+
+artifacts:
+  - path: "C:\projects\spb-dialog-c\listdir.log"
+    name: ListDir
