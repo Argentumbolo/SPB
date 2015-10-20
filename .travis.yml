@@ -12,6 +12,7 @@ before_install:
   - sudo apt-get install -qq libyajl-dev libxml2-dev libxqilla-dev
   - if [ "$CC" = "gcc" ] ; then sudo apt-get install -qq gcc-5; fi
   - if [ "$CC" = "gcc" ] ; then export CXX="gcc-5" CC="gcc-5"; fi
+  - ls -R /usr/bin | grep gcc
 
 branches:
   only:
