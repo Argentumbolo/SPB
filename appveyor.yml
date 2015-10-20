@@ -35,5 +35,5 @@ after_build:
   - test\testrun.bat
 
 artifacts:
-  - path: C:\projects\spb-dialog-c\listdir.log
+  - path: listdir.log
     name: ListDir
