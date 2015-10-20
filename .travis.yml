@@ -10,8 +10,8 @@ before_install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -qq
   - sudo apt-get install -qq libyajl-dev libxml2-dev libxqilla-dev
-  - if [ "$CC" = "gcc" ] ; then sudo apt-get install -qq g++-5.2; fi
-  - if [ "$CC" = "gcc" ] ; then export CXX="g++-5" CC="gcc-5"; fi
+  - if [ "$CC" = "gcc" ] ; then sudo apt-get install -qq gcc-5; fi
+  - if [ "$CC" = "gcc" ] ; then export CXX="gcc-5" CC="gcc-5"; fi
 
 branches:
   only:
