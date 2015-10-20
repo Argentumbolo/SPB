@@ -16,7 +16,6 @@ os: Visual Studio 2015
 init:
   - git config --global core.autocrlf input
 
-
 # clone directory
 clone_folder: c:\projects\sqlite
 
@@ -34,3 +33,6 @@ build:
 before_build:
   - echo Running cmake...
   - cmake -G "Visual Studio 14 2015 Win64" .
+
+after_build:
+  - test\testrun.bat
