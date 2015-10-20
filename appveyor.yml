@@ -27,6 +27,9 @@ build:
 before_build:
   - echo Running cmake...
   - cmake -G "Visual Studio 14 2015 Win64" .
+
+after_build:
   - DIR C:\
   - DIR C:\projects\
   - DIR C:\projects\spb-dialog-c
+  - test\testrun.bat
