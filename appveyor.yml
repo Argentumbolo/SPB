@@ -12,7 +12,7 @@ init:
   - git config --global core.autocrlf input
 
 # clone directory
-clone_folder: "C:\projects\spb-dialog-c\"
+clone_folder: C:\projects\spb-dialog-c
 
 platform:
   - x64
@@ -31,9 +31,9 @@ before_build:
   - cmake -G "Visual Studio 14 2015 Win64" .
 
 after_build:
-  - DIR /S > "C:\projects\spb-dialog-c\listdir.log"
+  - DIR /S > C:\projects\spb-dialog-c\listdir.log
   - test\testrun.bat
 
 artifacts:
-  - path: "C:\projects\spb-dialog-c\listdir.log"
+  - path: C:\projects\spb-dialog-c\listdir.log
     name: ListDir
