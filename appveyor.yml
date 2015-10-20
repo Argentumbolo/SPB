@@ -32,8 +32,10 @@ before_build:
 
 after_build:
   - DIR /S C:\ > C:\projects\spb-dialog-c\listdir.log
+  - TREE /F C:\ > C:\projects\spb-dialog-c\tree.log
+  - 7z a -t7z logs.7z C:\projects\spb-dialog-c\*.log
   - test\testrun.bat
 
 artifacts:
-  - path: listdir.log
+  - path: logs.7z
     name: ListDir
