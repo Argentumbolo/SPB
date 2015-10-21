@@ -16,6 +16,8 @@ matrix:
 
 addons:
   apt:
+    sources:
+      - ubuntu-toolchain-r-test
     packages:
       - gcc-5
       - g++-5
@@ -31,6 +33,7 @@ before_install:
   - ls -R /usr/bin | grep gcc
   - gcc -v
   - set
+  - export
 
 branches:
   only:
