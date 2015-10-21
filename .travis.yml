@@ -29,6 +29,8 @@ before_install:
 #  - if [ "$CXX" = "g++" ] ; then sudo apt-get install -qq g++-5; fi
   - if [ "$CXX" = "g++" ] ; then export CXX="g++-5" CC="g++-5"; fi
   - ls -R /usr/bin | grep gcc
+  - gcc -v
+  - set
 
 branches:
   only:
