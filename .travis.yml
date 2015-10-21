@@ -2,9 +2,17 @@ language: c
 
 sudo: required
 
+os:
+  - linux
+  - osx
+
 compiler:
   - clang
   - gcc
+
+matrix:
+  allow_failures:
+    - os: osx
 
 before_install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
